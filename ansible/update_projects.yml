@@ -33,61 +33,61 @@
       pause: seconds=15
 
 
-    - name: Git pull versioneye-tasks
-      shell: cd ../../versioneye-tasks/; git pull
+    # - name: Git pull versioneye-tasks
+    #   shell: cd ../../versioneye-tasks/; git pull
 
-    - name: Update version in file for versioneye-tasks
-      lineinfile: dest="../../versioneye-tasks/Gemfile" regexp="^gem 'versioneye-core'" line="gem 'versioneye-core', :git => 'https://github.com/versioneye/versioneye-core.git', :tag => 'v{{release_version}}'"
+    # - name: Update version in file for versioneye-tasks
+    #   lineinfile: dest="../../versioneye-tasks/Gemfile" regexp="^gem 'versioneye-core'" line="gem 'versioneye-core', :git => 'https://github.com/versioneye/versioneye-core.git', :tag => 'v{{release_version}}'"
 
-    - name: Bundle update for versioneye-tasks
-      shell: cd ../../versioneye-tasks/; bundle update;
+    # - name: Bundle update for versioneye-tasks
+    #   shell: cd ../../versioneye-tasks/; bundle update;
 
-    - name: Git add all for versioneye-tasks
-      shell: cd ../../versioneye-tasks/; git add --all
+    # - name: Git add all for versioneye-tasks
+    #   shell: cd ../../versioneye-tasks/; git add --all
 
-    - name: Git commit for versioneye-tasks
-      shell: cd ../../versioneye-tasks/; git commit -m "Update Core"
+    # - name: Git commit for versioneye-tasks
+    #   shell: cd ../../versioneye-tasks/; git commit -m "Update Core"
 
-    - name: Git push for versioneye-tasks
-      shell: cd ../../versioneye-tasks/; git push
-
-
-    - name: Git pull versioneye-api
-      shell: cd ../../versioneye-api/; git pull
-
-    - name: Update version in file for versioneye-api
-      lineinfile: dest="../../versioneye-api/Gemfile" regexp="^gem 'versioneye-core'" line="gem 'versioneye-core', :git => 'https://github.com/versioneye/versioneye-core.git', :tag => 'v{{release_version}}'"
-
-    - name: Bundle update for versioneye-api
-      shell: cd ../../versioneye-api/; bundle update;
-
-    - name: Git add all for versioneye-api
-      shell: cd ../../versioneye-api/; git add --all
-
-    - name: Git commit for versioneye-api
-      shell: cd ../../versioneye-api/; git commit -m "Update Core"
-
-    - name: Git push for versioneye-api
-      shell: cd ../../versioneye-api/; git push
+    # - name: Git push for versioneye-tasks
+    #   shell: cd ../../versioneye-tasks/; git push
 
 
-    - name: Git pull versioneye
-      shell: cd ../../versioneye/; git pull
+    # - name: Git pull versioneye-api
+    #   shell: cd ../../versioneye-api/; git pull
 
-    - name: Update version in file for versioneye
-      lineinfile: dest="../../versioneye/Gemfile" regexp="^gem 'versioneye-core'" line="gem 'versioneye-core', :git => 'https://github.com/versioneye/versioneye-core.git', :tag => 'v{{release_version}}'"
+    # - name: Update version in file for versioneye-api
+    #   lineinfile: dest="../../versioneye-api/Gemfile" regexp="^gem 'versioneye-core'" line="gem 'versioneye-core', :git => 'https://github.com/versioneye/versioneye-core.git', :tag => 'v{{release_version}}'"
 
-    - name: Bundle update for versioneye
-      shell: cd ../../versioneye/; bundle update;
+    # - name: Bundle update for versioneye-api
+    #   shell: cd ../../versioneye-api/; bundle update;
 
-    - name: Git add all for versioneye
-      shell: cd ../../versioneye/; git add --all
+    # - name: Git add all for versioneye-api
+    #   shell: cd ../../versioneye-api/; git add --all
 
-    - name: Git commit for versioneye
-      shell: cd ../../versioneye/; git commit -m "Update Core"
+    # - name: Git commit for versioneye-api
+    #   shell: cd ../../versioneye-api/; git commit -m "Update Core"
 
-    - name: Git push for versioneye
-      shell: cd ../../versioneye/; ./script/push_to_master.sh
+    # - name: Git push for versioneye-api
+    #   shell: cd ../../versioneye-api/; git push
+
+
+    # - name: Git pull versioneye
+    #   shell: cd ../../versioneye/; git pull
+
+    # - name: Update version in file for versioneye
+    #   lineinfile: dest="../../versioneye/Gemfile" regexp="^gem 'versioneye-core'" line="gem 'versioneye-core', :git => 'https://github.com/versioneye/versioneye-core.git', :tag => 'v{{release_version}}'"
+
+    # - name: Bundle update for versioneye
+    #   shell: cd ../../versioneye/; bundle update;
+
+    # - name: Git add all for versioneye
+    #   shell: cd ../../versioneye/; git add --all
+
+    # - name: Git commit for versioneye
+    #   shell: cd ../../versioneye/; git commit -m "Update Core"
+
+    # - name: Git push for versioneye
+    #   shell: cd ../../versioneye/; ./script/push_to_master.sh
 
 
     - name: Git pull versioneye-security
@@ -109,20 +109,20 @@
       shell: cd ../../versioneye-security/; git push
 
 
-    - name: Git pull crawl_r
-      shell: cd ../../crawl_r/; git pull
+    # - name: Git pull crawl_r
+    #   shell: cd ../../crawl_r/; git pull
 
-    - name: Update version in file for crawl_r
-      lineinfile: dest="../../crawl_r/Gemfile" regexp="^gem 'versioneye-core'" line="gem 'versioneye-core', :git => 'https://github.com/versioneye/versioneye-core.git', :tag => 'v{{release_version}}'"
+    # - name: Update version in file for crawl_r
+    #   lineinfile: dest="../../crawl_r/Gemfile" regexp="^gem 'versioneye-core'" line="gem 'versioneye-core', :git => 'https://github.com/versioneye/versioneye-core.git', :tag => 'v{{release_version}}'"
 
-    - name: Bundle update for crawl_r
-      shell: cd ../../crawl_r/; bundle update;
+    # - name: Bundle update for crawl_r
+    #   shell: cd ../../crawl_r/; bundle update;
 
-    - name: Git add all for crawl_r
-      shell: cd ../../crawl_r/; git add --all
+    # - name: Git add all for crawl_r
+    #   shell: cd ../../crawl_r/; git add --all
 
-    - name: Git commit for crawl_r
-      shell: cd ../../crawl_r/; git commit -m "Update Core"
+    # - name: Git commit for crawl_r
+    #   shell: cd ../../crawl_r/; git commit -m "Update Core"
 
-    - name: Git push for crawl_r
-      shell: cd ../../crawl_r/; git push
+    # - name: Git push for crawl_r
+    #   shell: cd ../../crawl_r/; git push
