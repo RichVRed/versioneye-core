@@ -4,7 +4,8 @@ echo "Going to run all specs"
 export RAILS_ENV="test"
 echo "Rails mode: $RAILS_ENV"
 
-rspec
+# rspec
+rspec spec/versioneye/mailers/*
 # rspec spec/versioneye/services/team_notification_service_spec.rb
 
 export RAILS_ENV="development"
